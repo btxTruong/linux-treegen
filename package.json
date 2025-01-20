@@ -10,5 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "repository": { "url": "https://github.com/btxTruong/linux-treegen" },
+  "keywords": ["tree", "generator", "json"]
 }
