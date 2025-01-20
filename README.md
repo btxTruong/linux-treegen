@@ -1,5 +1,5 @@
 # linux-treegen
-linux-treegen is a lightweight JavaScript library for generating folder-like tree structures, inspired by the Linux tree command.
+linux-treegen is a lightweight Typescript library for generating folder-like tree structures, inspired by the Linux tree command.
 
 ## Features
 - Dynamically generate tree structures for nested JSON objects.

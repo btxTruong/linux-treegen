@@ -1,16 +1,32 @@
 {
   "name": "linux-treegen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple tree generator from JSON",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "scripts": {
-    "test": "jest index.test.js"
+    "test": "jest",
+    "build": "tsc",
+    "prepare" : "npm run build"
   },
   "author": "truongbui",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
   },
-  "repository": { "url": "https://github.com/btxTruong/linux-treegen" },
-  "keywords": ["tree", "generator", "json"]
+  "repository": {
+    "url": "https://github.com/btxTruong/linux-treegen"
+  },
+  "keywords": [
+    "tree",
+    "generator",
+    "json"
+  ]
 }
