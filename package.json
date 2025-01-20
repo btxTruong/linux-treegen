@@ -1,0 +1,14 @@
+{
+  "name": "linux-treegen",
+  "version": "0.0.1",
+  "description": "A simple tree generator from JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest index.test.js"
+  },
+  "author": "truongbui",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
