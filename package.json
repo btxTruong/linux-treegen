@@ -1,17 +1,25 @@
 {
   "name": "linux-treegen",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple tree generator from JSON",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "files": ["README.md", "dist"],
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "tsc",
-    "prepare" : "npm run build"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "clean": "rm -rf dist",
+    "prepare" : "npm run clean && npm run build"
   },
   "author": "truongbui",
   "license": "MIT",

@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
+    "declarationDir": "./dist/types",
     "strict": true,
     "skipLibCheck": true,
     "outDir": "./dist",
     "moduleResolution": "node",
+    "esModuleInterop": true,
   },
   "include": ["index.ts"],
   "exclude": ["node_modules", "index.test"]
