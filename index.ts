@@ -1,4 +1,9 @@
-function validate(nodes, path = '', errors = []) {
+type TreeNode = {
+  name: string;
+  children?: TreeNode[];
+};
+
+export function validate(nodes: TreeNode[], path = '', errors: string[] = []) {
   nodes.forEach((node, index) => {
     const nodePath = path ? `${path} > ${node?.name ??
     `Unknown name at index ${index} `}` : `index ${index}`;
@@ -21,7 +26,7 @@ function validate(nodes, path = '', errors = []) {
 
 const SPACE = ' ';
 
-function treegen(nodes, prefix = '') {
+export function treegen(nodes: TreeNode[], prefix = '') {
   if (!Array.isArray(nodes)) {
     return 'Invalid JSON structure';
   }
@@ -31,7 +36,7 @@ function treegen(nodes, prefix = '') {
     return errors.join('\n');
   }
 
-  const lines = [];
+  const lines: string[] = [];
 
   nodes.forEach((node, index) => {
     const isLast = index === nodes.length - 1;
@@ -46,8 +51,3 @@ function treegen(nodes, prefix = '') {
 
   return lines.join('\n');
 }
-
-module.exports = {
-  validate,
-  treegen,
-};

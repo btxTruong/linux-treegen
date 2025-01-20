@@ -1,4 +1,4 @@
-const {validate, treegen} = require('./index');
+import { treegen, validate } from './index';
 
 describe('linux-treegen', () => {
   describe('validate', () => {
@@ -9,18 +9,18 @@ describe('linux-treegen', () => {
 
     it('returns error for missing name', () => {
       const nodes = [{children: []}];
-      expect(validate(nodes)).toEqual(["Missing 'name' at index 0"]);
+      expect(validate(nodes as any)).toEqual(["Missing 'name' at index 0"]);
     });
 
     it('returns error for non-array children', () => {
       const nodes = [{name: 'root', children: {}}];
-      expect(validate(nodes)).toEqual(
+      expect(validate(nodes as any)).toEqual(
         ["'children' must be an array at index 0."]);
     });
 
     it('returns multiple errors for invalid nodes', () => {
       const nodes = [{children: {}}, {name: 'root', children: 'invalid'}];
-      expect(validate(nodes)).toEqual(
+      expect(validate(nodes as any)).toEqual(
         [
           "Missing 'name' at index 0",
           "'children' must be an array at index 0.",
@@ -38,7 +38,7 @@ describe('linux-treegen', () => {
     });
 
     it('returns error message for invalid JSON structure', () => {
-      expect(treegen('invalid')).toBe('Invalid JSON structure');
+      expect(treegen('invalid' as any)).toBe('Invalid JSON structure');
     });
 
     it('handles nested children correctly', () => {
