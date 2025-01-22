@@ -1,4 +1,8 @@
 # linux-treegen
+[![npm version](https://badgen.net/npm/v/linux-treegen)](https://www.npmjs.com/package/linux-treegen)
+[![npm downloads](https://badgen.net/npm/dm/linux-treegen)](https://www.npmjs.com/package/linux-treegen)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 linux-treegen is a lightweight Typescript library for generating folder-like tree structures, inspired by the Linux tree command.
 
 ## Features
@@ -49,7 +53,4 @@ console.log(tree);
 ```
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-## Author
-Developed by Truong Bui
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/btxTruong/linux-treegen/blob/main/LICENSE) file for more details.

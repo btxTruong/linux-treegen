@@ -1,6 +1,6 @@
 {
   "name": "linux-treegen",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple tree generator from JSON",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
